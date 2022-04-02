@@ -1,5 +1,6 @@
 import React from "react";
 import {useSpeechSynthesis} from "react-speech-kit";
+import styles from "../styles/water.css"
 
 const Speech = (props) => {
     const {speak} = useSpeechSynthesis();
@@ -9,7 +10,7 @@ const Speech = (props) => {
             <div className="group">
             </div>
             <div className="group">
-                <button onClick={() => speak({text: props.description})}>
+                <button onClick={() => speak({text: props.description})} style={styles.button}>
                     Speech
                 </button>
             </div>
