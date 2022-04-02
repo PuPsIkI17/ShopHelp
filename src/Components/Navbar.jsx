@@ -13,12 +13,12 @@ const MyNavbar = ({type}) => {
                 <Nav className="me-auto">
                     <Nav.Link href="/">Home</Nav.Link>
                     <Nav.Link href="/barcode">Barcode Scanner</Nav.Link>
-                    <NavDropdown title="Shopes" id="basic-nav-dropdown">
+                    <NavDropdown title="Shops" id="basic-nav-dropdown">
                         <NavDropdown.Item href="/tech">Tech</NavDropdown.Item>
                         <NavDropdown.Item href="/food">Food</NavDropdown.Item>
                         <NavDropdown.Item href="/pharmacy">Pharmacy</NavDropdown.Item>
                         <NavDropdown.Divider />
-                        <NavDropdown.Item href="/all">All</NavDropdown.Item>
+                        <NavDropdown.Item href="/all">All Products</NavDropdown.Item>
                     </NavDropdown>
                 </Nav>
                 </Navbar.Collapse>

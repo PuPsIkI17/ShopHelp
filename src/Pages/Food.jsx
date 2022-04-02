@@ -2,10 +2,10 @@ import React from "react";
 import { Container, Row, Col, Card, Image} from 'react-bootstrap';
 import { Link} from "react-router-dom";
 import MyNavbar from "../Components/Navbar"
-import IMalai from "../Images/malai.jpg"
-import SMalai from "../Images/malaiSign.jpg"
-import IWater from "../Images/water.jpg"
-import SWater from "../Images/waterSign.gif"
+import IMalai from "../Products/ProductImages/malai.jpg"
+import SMalai from "../Products/ProductImages/malaiSign.jpg"
+import IWater from "../Products/ProductImages/water.jpg"
+import SWater from "../Products/ProductImages/waterSign.gif"
 
 import "../styles/Main.css"
 
@@ -15,7 +15,7 @@ const Food = () => {
             <MyNavbar type = {"Food"}/>
             <Row className = 'mt-3 pt-md-5 mt-md-5 text-center justify-content-md-center '>
                 <Col md={{ span: 3 }} className="pb-4" >
-                    <Link to = "/food" >
+                    <Link to = "/product" state = {{type:1, name:"Malai"}}>
                         <Card className = "Image">
                             <Card.Img variant="top" src={IMalai} />
                             <Card.Body>                  
@@ -25,7 +25,7 @@ const Food = () => {
                     </Link>
                 </Col> 
                 <Col md={{ span: 3 }} className="pb-4" >
-                    <Link to = "/water" >
+                    <Link to = "/product" state = {{type:2, name:"Water"}}>
                         <Card className = "Image">
                             <Card.Img variant="top" src={IWater} />
                             <Card.Body>                  

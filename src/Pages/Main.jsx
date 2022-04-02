@@ -49,12 +49,12 @@ const Main = () => {
                     </Link>
                 </Col>  
             </Row>
-            <Row className = 'mt-2 text-center justify-content-md-center '>
+            <Row className = 'mt-md-0 mt-5 text-center justify-content-md-center '>
                 <Col md={{ span: 9 }} >
                     <hr/>
                 </Col>  
             </Row>
-            <Row className = 'mt-2 mb-5 text-center justify-content-md-center '>
+            <Row className = 'mt-md-2 mt-5 mb-5 text-center justify-content-md-center '>
                 <Col md={{ span: 3 }} >
                     <Link to = "/barcode" className="pb-4" >
                         <Card className = "Image">
