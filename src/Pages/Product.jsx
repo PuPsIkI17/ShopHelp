@@ -25,32 +25,32 @@ const details = [
     {
         title: "Cook only with quality malai and choose Baneasa malai, the malai recommended by all housewives!",
         description: "Malai is an ingredient used for both main dishes and desserts, it is obtained from the best quality corn. Baneasa extra corn is a degerminated corn, ie before the grinding process, through the technological production process, the germs inside the corn grains were removed.",
-        price: "5 lei"
+        price: "5"
     },
     {
         title:"Take a look at the list of attributes, features, and benefits you might get when choosing to drink plain water from Miraqua",
         description:"Because we know how important water is for you, we offer you a box of 12 bottles of Borsec plain water, in the 0.5 liter version and a plastic container, ideal to be taken with you for a walk, work or a trip!",
-        price: "1.9 lei"
+        price: "1.9"
     },
     {
         title:"JBL FLIP 5 Portable Wireless Bluetooth Speaker IPX7 Waterproof On-The-Go Bundle with Boomph Hardshell Protective Case - Black",
         description:"LOUD & CLEAR MUSIC ANYWHERE: This wireless Bluetooth speaker has a new racetrack-shaped driver that delivers crystal clear and loud music as well as strong bass. The portable speaker is wireless so you can listen to music during your outdoor and travel adventures.",
-        price: "600 lei"
+        price: "600"
     },
     {
         title:"Paracetamol (acetaminophen) is a pain reliever and a fever reducer. The exact mechanism of action of is not known.",
         description:"Paracetamol is used to treat many conditions such as headache, muscle aches, arthritis, backache, toothaches, colds, and fevers. It relieves pain in mild arthritis but has no effect on the underlying inflammation and swelling of the joint.",
-        price: "15 lei"
+        price: "15"
     },
     {
         title:"Nurofen 200mg Coated Tablets work where they are needed – at the site of pain*. They quickly relieve pain and lower temperature",
         description:"Adults and children 12 years and older: Swallow 2 tablets (400 mg) with water, then, if necessary, take 1 or 2 tablets (200 mg or 400 mg) every 4 hours.Do not take more than 6 tablets (1200 mg) in 24 hours.Not suitable for children under 12 years.        If symptoms persist for more than 3 days or if new symptoms occur, stop treatment at once and consult your doctor.",
-        price: "30 lei"
+        price: "30"
     },
     {
         title:"Cappy 100%  orange is a delicious juice full of the goodness from fruit.",
         description:"A great drink to start your day as part of a nourishing breakfast, which is the most important meal of the day.  We at Cappy have been creating delicious fruit drinks for over 60 years, prioritizing quality and great taste without using preservatives*. Fill your glass and the glasses of your loved ones with Cappy and watch the goodness spread. When you care, they care, and when they care, goodness grows and a good morning is turned into a good day. DOING GOOD, TASTES GOOD.",
-        price: "5 lei"
+        price: "5"
     }
 ]
 
@@ -121,41 +121,41 @@ const Product = () => {
                             </p>
                             <br/>
                             <br/>
-                            <h5>Price</h5> {details[type - 1].price}
+                            <h5>Price</h5> {details[type - 1].price} lei
                         </div>
                     } 
                     {option === 1 &&
                         <div>
-                            <Parser description={"Details"}/>
+                            <Parser description={"Details"} type = {0}/>
                             <br/>
-                            <Parser description={details[type - 1].title}/>
-                            <br/>
-                            <br/>
-                            <Parser description={details[type - 1].description}/>
+                            <Parser description={details[type - 1].title} type = {0}/>
                             <br/>
                             <br/>
-                            <Parser description={ "  price"}/>
-                            :{details[type - 1].price}
-                            <Parser description={details[type - 1].price}/>
+                            <Parser description={details[type - 1].description} type = {0}/>
+                            <br/>
+                            <br/>
+                            <Parser description={ "  price "} type = {0}/>
+                            {details[type - 1].price}
+                            <Parser description={ "price"} type = {0}/>
                         </div>
                     }
                     </Col>
 
                     </Row>
                 <Row className = 'ms-md-0 ms-5 mt-md-5 text-center justify-content-md-center '>
-                    <Col md={{ span: 3 }} className="pb-4" >
+                    <Col md={{ span: 5 }} className="pb-4" >
                     <ButtonToolbar aria-label="Toolbar with button groups">
                         <ButtonGroup className="me-2" aria-label="First group">
                             {option === 0 &&
                                 <div>
                                     <Button onClick = {() => setOption(0)}>Letters</Button>
-                                    <Button onClick = {() => setOption(1)} variant="outline-primary">Signes</Button> 
+                                    <Button onClick = {() => setOption(1)} variant="outline-primary"><Parser description={ "Signs"} type = {1} /></Button> 
                                 </div>
                             }
                            {option === 1 &&
                                 <div>
                                     <Button onClick = {() => setOption(0)} variant="outline-primary">Letters</Button>
-                                    <Button onClick = {() => setOption(1)}>Signes</Button> 
+                                    <Button onClick = {() => setOption(1)}> <Parser description={"Signs"} type = {1} /></Button> 
                                 </div>
                             }
 
@@ -177,8 +177,18 @@ const Product = () => {
                     <h4>Please try again</h4>
                 </Col>
             </Row>
-                <Speech description={"Error"}/>
-                <Parser description={"Error"}/>
+            <hr/>
+            <Row className = 'mt-3 pb-md-5 mt-md-5 text-center justify-content-md-center '>
+                <Col md={{ span: 5 }} className="pb-4" >
+                    <div className="mb-5">
+                        <Parser description={"Error"} type = {0}/>
+                    </div>
+                    <hr/>
+                    <div className="me-3">
+                        <Speech  description={"Error"}/>
+                    </div>
+                </Col>
+            </Row>
         </Container>    
     )
 }

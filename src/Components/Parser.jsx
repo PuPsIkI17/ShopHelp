@@ -29,72 +29,74 @@ import Z from "../Signs/z.png"
 import Space from "../Signs/Space.png"
 import "../styles/Images.css"
 
-const Piece = ({character}) => {
+const Piece = ({character, type}) => {
+    const piece = "piece" + type;
+
     if(character === "a" || character === "A")
-        return (<Image src={A} className = "piece"/>)
+        return (<Image src={A} className = {`${piece}`}/>)
     else if(character === "b" || character === "B")
-        return (<Image src={B} className = "piece"/>)
+        return (<Image src={B} className = {`${piece}`}/>)
     else if(character === "c" || character === "C")
-        return (<Image src={C} className = "piece"/>)
+        return (<Image src={C} className = {`${piece}`}/>)
     else if(character === "d" || character === "D")
-        return (<Image src={D} className = "piece"/>)
+        return (<Image src={D} className = {`${piece}`}/>)
     else if(character === "e" || character === "e")
-        return (<Image src={E} className = "piece"/>)
+        return (<Image src={E} className = {`${piece}`}/>)
     else if(character === "f" || character === "F")
-        return (<Image src={F} className = "piece"/>)
+        return (<Image src={F} className = {`${piece}`}/>)
     else if(character === "g" || character === "G")
-        return (<Image src={G} className = "piece"/>)
+        return (<Image src={G} className = {`${piece}`}/>)
     else if(character === "h" || character === "H")
-        return (<Image src={H} className = "piece"/>)
+        return (<Image src={H} className = {`${piece}`}/>)
     else if(character === "i" || character === "I")
-        return (<Image src={I} className = "piece"/>)
+        return (<Image src={I} className = {`${piece}`}/>)
     else if(character === "j" || character === "J")
-        return (<Image src={J} className = "piece"/>)
+        return (<Image src={J} className = {`${piece}`}/>)
     else if(character === "k" || character === "K")
-        return (<Image src={K} className = "piece"/>)
+        return (<Image src={K} className = {`${piece}`}/>)
     else if(character === "l" || character === "L")
-        return (<Image src={L} className = "piece"/>)
+        return (<Image src={L} className = {`${piece}`}/>)
     else if(character === "m" || character === "M")
-        return (<Image src={M} className = "piece"/>)
+        return (<Image src={M} className = {`${piece}`}/>)
     else if(character === "n" || character === "N")
-        return (<Image src={N} className = "piece"/>)
+        return (<Image src={N} className = {`${piece}`}/>)
     else if(character === "o" || character === "O")
-        return (<Image src={O} className = "piece"/>)
+        return (<Image src={O} className = {`${piece}`}/>)
     else if(character === "p" || character === "P")
-        return (<Image src={P} className = "piece"/>)
+        return (<Image src={P} className = {`${piece}`}/>)
     else if(character === "q" || character === "Q")
-        return (<Image src={Q} className = "piece"/>)
+        return (<Image src={Q} className = {`${piece}`}/>)
     else if(character === "r" || character === "R")
-        return (<Image src={R} className = "piece"/>)
+        return (<Image src={R} className = {`${piece}`}/>)
     else if(character === "s" || character === "S")
-        return (<Image src={S} className = "piece"/>)
+        return (<Image src={S} className = {`${piece}`}/>)
     else if(character === "T" || character === "T")
-        return (<Image src={T} className = "piece"/>)
+        return (<Image src={T} className = {`${piece}`}/>)
     else if(character === "u" || character === "U")
-        return (<Image src={U} className = "piece"/>)
+        return (<Image src={U} className = {`${piece}`}/>)
     else if(character === "v" || character === "V")
-        return (<Image src={V} className = "piece"/>)
+        return (<Image src={V} className = {`${piece}`}/>)
     else if(character === "w" || character === "W")
-        return (<Image src={W} className = "piece"/>)
+        return (<Image src={W} className = {`${piece}`}/>)
     else if(character === "x" || character === "X")
-        return (<Image src={X} className = "piece"/>)
+        return (<Image src={X} className = {`${piece}`}/>)
     else if(character === "y" || character === "Y")
-        return (<Image src={Y} className = "piece"/>)
+        return (<Image src={Y} className = {`${piece}`}/>)
     else if(character === "z" || character === "Z")
-        return (<Image src={Z} className = "piece"/>)
+        return (<Image src={Z} className = {`${piece}`}/>)
     else if(character === " " )
-        return (<Image src={Space} className = "piece"/>)
+        return (<Image src={Space} className = {`${piece}`}/>)
     else return <></>
 }
 
-const Parser = ({description}) => {
+const Parser = ({description, type}) => {
     const length = description.length;
     const pieces = [...Array(length)]
     return (
         <>
             {
                 pieces.map((props, i) => (
-                    <Piece key={i} character = {description[i]} />
+                    <Piece type = {type} key={i} character = {description[i]} />
                 ))
             }
         </>  
