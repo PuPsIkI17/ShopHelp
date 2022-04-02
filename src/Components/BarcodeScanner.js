@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import Scanner from './Scanner'
 import {Fab, TextareaAutosize, Paper} from '@material-ui/core'
 import {ArrowBack} from '@material-ui/icons'
-import { Link, useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 class BarcodeScanner extends Component {
     state = {
