@@ -10,18 +10,19 @@ import Speech from "../Components/Speech";
 const Additional = () => {
 
     return (
-        <>
-            <Container fluid className="Main">
-                <MyNavbar type="Barcode Scanner"/>
-                <Row className='pt-2 mt-2 text-center justify-content-md-center '>
-                    <Col md={{span: 3}}>
-                        Qr code
-                    </Col>
-                </Row>
-                <div><BarcodeScanner/></div>
-            </Container>
-            <div><Speech/></div>
-        </>
+        <Container fluid className="Main">
+            <MyNavbar type="Barcode Scanner"/>
+            <Row className='pt-2 mt-2 text-center justify-content-md-center '>
+                <Col md={{span: 3}}>
+                    <h2>Scan your barcode</h2>
+                </Col>
+            </Row>
+            <Row className='pt-2 mt-2 text-center justify-content-md-center '>
+                <Col>
+                    <BarcodeScanner/>
+                </Col>
+            </Row>
+        </Container>
     )
 }
 

@@ -8,15 +8,9 @@ class Scanner extends Component {
         inputStream: {
           type: 'LiveStream',
           constraints: {
-            width: 1280,
+            width: 1200,
             height: 720,
             facingMode: 'environment',
-          },
-          area: { // defines rectangle of the detection/localization area
-            top: "10%",    // top offset
-            right: "10%",  // right offset
-            left: "10%",   // left offset
-            bottom: "10%"  // bottom offset
           },
         },
         locator: {

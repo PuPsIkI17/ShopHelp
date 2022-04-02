@@ -1,8 +1,7 @@
 import React, { Component } from 'react'
 import Scanner from './Scanner'
-import {Fab, TextareaAutosize, Paper} from '@material-ui/core'
-import {ArrowBack} from '@material-ui/icons'
-import { Link } from "react-router-dom";
+import { TextareaAutosize, Paper} from '@material-ui/core'
+import "../styles/barcode.css"
 
 class BarcodeScanner extends Component {
     state = {
@@ -22,14 +21,7 @@ class BarcodeScanner extends Component {
     render() {
         return (
             <div>
-                <Link to="/">
-                    <Fab style={{marginRight:10}} color="secondary">
-                        <ArrowBack/>
-                    </Fab>
-                </Link>
-                <span>Barcode Scanner</span>
-
-                <Paper variant="outlined" style={{marginTop:30, width:1280, height:720}}>
+                <Paper variant="outlined" style={{marginTop:0, height:720}}>
                     <Scanner onDetected={this._onDetected} />
                 </Paper>
 
