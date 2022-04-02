@@ -3,6 +3,7 @@ import { Link} from "react-router-dom";
 import { Container, Row, Col} from 'react-bootstrap';
 
 import "../styles/additional.css"
+import BarcodeScanner from "../Components/BarcodeScanner";
 
 
 const Additional = () => {
@@ -15,7 +16,7 @@ const Additional = () => {
                         Qr code
                     </Col>  
                 </Row>
-
+                <BarcodeScanner/>
                 <Row className = 'mt-2 text-center justify-content-md-center '>
                     <Col md={{ span: 3 }} >
                         <Link to = "/">
