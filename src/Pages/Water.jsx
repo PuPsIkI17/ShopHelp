@@ -5,6 +5,9 @@ import IWater from "../Images/water.jpg"
 import SWater from "../Images/waterSign.gif"
 
 import "../styles/Main.css"
+import Speech from "../Components/Speech";
+
+const description = "Vodeem nah-hui. Car car Shoroi"
 
 const Food = () => {
     return (
@@ -21,9 +24,10 @@ const Food = () => {
                 </Col>   
                 <Col md={{ span: 3 }} className="pb-4" >
                     <h3>Description</h3>
-                    Apa buna 
+                    {description}
                 </Col>  
             </Row>
+            <Speech description={description}/>
         </Container>
     )
 }

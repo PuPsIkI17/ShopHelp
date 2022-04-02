@@ -16,7 +16,6 @@ class BarcodeScanner extends Component {
     _onDetected = result => {
         this.setState({ results: [] })
         this.setState({ results: this.state.results.concat([result]) })
-        console.log(result)
         window.location.replace("/" + result.codeResult.code)
     }
 
@@ -30,7 +29,7 @@ class BarcodeScanner extends Component {
                 </Link>
                 <span>Barcode Scanner</span>
 
-                <Paper variant="outlined" style={{marginTop:30, width:640, height:320}}>
+                <Paper variant="outlined" style={{marginTop:30, width:1280, height:720}}>
                     <Scanner onDetected={this._onDetected} />
                 </Paper>
 
