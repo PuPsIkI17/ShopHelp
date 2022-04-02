@@ -7,7 +7,7 @@ import Tech from "./Pages/Tech";
 import Food from "./Pages/Food";
 import Pharmacy from "./Pages/Pharmacy";
 import All from "./Pages/All";
-
+import Water from "./Pages/Water";
 
 
 function Pages() {
@@ -20,6 +20,7 @@ function Pages() {
             <Route path="/food" element = {<Food />} />
             <Route path="/pharmacy" element = {<Pharmacy />} />
             <Route path="/all" element = {<All />} />
+            <Route path="/water" element = {<Water />} />
         </Routes>
     </div>
   );
