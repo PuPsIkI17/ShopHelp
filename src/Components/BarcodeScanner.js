@@ -21,7 +21,7 @@ class BarcodeScanner extends Component {
     render() {
         return (
             <div>
-                <Paper variant="outlined" style={{marginTop:0, height:720}}>
+                <Paper variant="outlined" style={{marginTop:0, height:window.innerHeight}}>
                     <Scanner onDetected={this._onDetected} />
                 </Paper>
 

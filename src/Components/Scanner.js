@@ -8,8 +8,8 @@ class Scanner extends Component {
         inputStream: {
           type: 'LiveStream',
           constraints: {
-            width: 1200,
-            height: 720,
+            width: window.innerWidth,
+            height: window.innerHeight,
             facingMode: 'environment',
           },
         },
@@ -42,7 +42,7 @@ class Scanner extends Component {
                 showPattern: true
             },
         },
-        locate: true,
+        locate: false,
       },
       function(err) {
         if (err) {
