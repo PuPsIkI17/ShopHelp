@@ -1,5 +1,5 @@
-import React from "react";
-import { Container, Row, Col, Card, Image} from 'react-bootstrap';
+import React, {useState} from "react";
+import { Container, Row, Col, Card, Image, ButtonGroup, Button, ButtonToolbar} from 'react-bootstrap';
 import { useLocation } from 'react-router-dom';
 
 import MyNavbar from "../Components/Navbar"
@@ -55,9 +55,20 @@ const details = [
 ]
 
 const Product = () => {
+    const [option,setOption] = useState(0);
+    const pathname = window.location.pathname;
     const location = useLocation();
-    const type = location.state.type;
-    const name = location.state.name;
+    let type = 0;
+    let name = "";
+
+    if(location && location.state){
+        type = location.state.type;
+        name = location.state.name;
+    }
+    else if(pathname.localeCompare("/5449000195036") === 0){
+        type = 6;
+        name = "Juice";
+    }
     let IPhoto = IMalai;
     let SPhoto = SMalai;
 
@@ -84,35 +95,91 @@ const Product = () => {
         IPhoto = IJuice;
         SPhoto = SJuice;
     }
+    if (type !== 0)
+        return (
+            <Container fluid className = "Main">
+                <MyNavbar type = {name}/>
+                <Row className = 'mt-3 pt-md-5 mt-md-5 text-center justify-content-md-center '>
+                    <Col md={{ span: 3 }} className="pb-4" >
+                        <Card className = "Image">
+                            <Card.Img variant="top" src={IPhoto} />
+                            <Card.Body>                  
+                                <Card.Title> <Image src={SPhoto} alt="Logo" className = "ImageSign" />  </Card.Title>
+                            </Card.Body>
+                        </Card>
+                    </Col>
 
+                    <Col md={{ span: 5 }} className="pb-4 pt-5" >                    
+                    {option === 0 &&
+                        <div>
+                            <h3>Details:</h3>
+                            <b>{details[type - 1].title}</b>
+                            <br/>
+                            <br/>
+                            <p>
+                                {details[type - 1].description}
+                            </p>
+                            <br/>
+                            <br/>
+                            <h5>Price</h5> {details[type - 1].price}
+                        </div>
+                    } 
+                    {option === 1 &&
+                        <div>
+                            <Parser description={"Details"}/>
+                            <br/>
+                            <Parser description={details[type - 1].title}/>
+                            <br/>
+                            <br/>
+                            <Parser description={details[type - 1].description}/>
+                            <br/>
+                            <br/>
+                            <Parser description={ "  price"}/>
+                            :{details[type - 1].price}
+                            <Parser description={details[type - 1].price}/>
+                        </div>
+                    }
+                    </Col>
+
+                    </Row>
+                <Row className = 'ms-md-0 ms-5 mt-md-5 text-center justify-content-md-center '>
+                    <Col md={{ span: 3 }} className="pb-4" >
+                    <ButtonToolbar aria-label="Toolbar with button groups">
+                        <ButtonGroup className="me-2" aria-label="First group">
+                            {option === 0 &&
+                                <div>
+                                    <Button onClick = {() => setOption(0)}>Letters</Button>
+                                    <Button onClick = {() => setOption(1)} variant="outline-primary">Signes</Button> 
+                                </div>
+                            }
+                           {option === 1 &&
+                                <div>
+                                    <Button onClick = {() => setOption(0)} variant="outline-primary">Letters</Button>
+                                    <Button onClick = {() => setOption(1)}>Signes</Button> 
+                                </div>
+                            }
+
+                            <Speech className ="mt-5" description={"Details" + details[type - 1].title + details[type - 1].description + "  price" + details[type - 1].price}/>
+                        </ButtonGroup>
+                    </ButtonToolbar>
+                    </Col>
+                </Row>
+            </Container>
+        )
+    else 
     return (
         <Container fluid className = "Main">
-            <MyNavbar type = {name}/>
+            <MyNavbar type = {"Error"}/>
             <Row className = 'mt-3 pt-md-5 mt-md-5 text-center justify-content-md-center '>
-                <Col md={{ span: 3 }} className="pb-4" >
-                    <Card className = "Image">
-                        <Card.Img variant="top" src={IPhoto} />
-                        <Card.Body>                  
-                            <Card.Title> <Image src={SPhoto} alt="Logo" className = "ImageSign" />  </Card.Title>
-                        </Card.Body>
-                    </Card>
-                </Col>   
                 <Col md={{ span: 5 }} className="pb-4" >
-                    <h3>Details:</h3>
-                    <b>{details[type - 1].title}</b>
+                    <h1>Error</h1>
                     <br/>
-                    <br/>
-                    <p>
-                        {details[type - 1].description}
-                    </p>
-                    <br/>
-                    <br/>
-                    <h5>Price</h5> {details[type - 1].price}
-                </Col>  
+                    <h4>Please try again</h4>
+                </Col>
             </Row>
-            <Speech description={"Details" + details[type - 1].title + details[type - 1].description + "  price" + details[type - 1].price}/>
-            <Parser description={"Details" + details[type - 1].title + details[type - 1].description + "  price" + details[type - 1].price}/>
-        </Container>
+                <Speech description={"Error"}/>
+                <Parser description={"Error"}/>
+        </Container>    
     )
 }
 

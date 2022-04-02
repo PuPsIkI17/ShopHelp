@@ -21,6 +21,7 @@ function Pages() {
             <Route path="/pharmacy" element = {<Pharmacy />} />
             <Route path="/all" element = {<All />} />
             <Route path="/product" element = {<Product />} />
+            <Route path="*" element = {<Product/>} />
         </Routes>
     </div>
   );

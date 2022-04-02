@@ -38,7 +38,7 @@ const Food = () => {
                     </Link>
                 </Col>
                 <Col md={{ span: 3 }} className="pb-4" >
-                    <Link to = "/product" state = {{type:6, name:"Water"}}>
+                    <Link to = "/product" state = {{type:6, name:"Juice"}}>
                         <Card className = "Image">
                             <Card.Img variant="top" src={IJuice} />
                             <Card.Body>                  
