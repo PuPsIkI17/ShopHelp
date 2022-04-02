@@ -14,7 +14,8 @@ import SParacetamol1 from "../Products/ProductImages/paracetamol1.png"
 import SParacetamol2 from "../Products/ProductImages/paracetamol2.png"
 import INurofen from "../Products/ProductImages/nurofen.jpg"
 import SNurofen from "../Products/ProductImages/nurofenSign.jpg"
-
+import IJuice from "../Products/ProductImages/cappy.jpg"
+import SJuice from "../Products/ProductImages/juiceSign.jpg"
 
 import "../styles/Main.css"
 
@@ -78,6 +79,16 @@ const Food = () => {
                             </Card>
                         </Link>
                     </Col> 
+                    <Col md={{ span: 3 }} className="pb-4" >
+                    <Link to = "/product" state = {{type:6, name:"Water"}}>
+                        <Card className = "Image">
+                            <Card.Img variant="top" src={IJuice} />
+                            <Card.Body>                  
+                                <Card.Title> <Image src={SJuice} alt="Logo" className = "ImageSign" />  </Card.Title>
+                            </Card.Body>
+                        </Card>
+                    </Link>
+                </Col>  
                 </Row>
         </Container>
     )

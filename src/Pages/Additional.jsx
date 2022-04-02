@@ -4,8 +4,6 @@ import {Container, Row, Col} from 'react-bootstrap';
 import MyNavbar from "../Components/Navbar"
 import "../styles/additional.css"
 import BarcodeScanner from "../Components/BarcodeScanner";
-import Speech from "../Components/Speech";
-
 
 const Additional = () => {
 

@@ -14,10 +14,12 @@ import IParacetamol from "../Products/ProductImages/paracetamol.jpg"
 import SParacetamol1 from "../Products/ProductImages/paracetamol1.png"
 import INurofen from "../Products/ProductImages/nurofen.jpg"
 import SNurofen from "../Products/ProductImages/nurofenSign.jpg"
-
+import IJuice from "../Products/ProductImages/cappy.jpg"
+import SJuice from "../Products/ProductImages/juiceSign.jpg"
 
 import "../styles/Main.css"
 import Speech from "../Components/Speech";
+import Parser from "../Components/Parser";
 
 const details = [
     {
@@ -44,6 +46,11 @@ const details = [
         title:"Nurofen 200mg Coated Tablets work where they are needed – at the site of pain*. They quickly relieve pain and lower temperature",
         description:"Adults and children 12 years and older: Swallow 2 tablets (400 mg) with water, then, if necessary, take 1 or 2 tablets (200 mg or 400 mg) every 4 hours.Do not take more than 6 tablets (1200 mg) in 24 hours.Not suitable for children under 12 years.        If symptoms persist for more than 3 days or if new symptoms occur, stop treatment at once and consult your doctor.",
         price: "30 lei"
+    },
+    {
+        title:"Cappy 100%  orange is a delicious juice full of the goodness from fruit.",
+        description:"A great drink to start your day as part of a nourishing breakfast, which is the most important meal of the day.  We at Cappy have been creating delicious fruit drinks for over 60 years, prioritizing quality and great taste without using preservatives*. Fill your glass and the glasses of your loved ones with Cappy and watch the goodness spread. When you care, they care, and when they care, goodness grows and a good morning is turned into a good day. DOING GOOD, TASTES GOOD.",
+        price: "5 lei"
     }
 ]
 
@@ -73,6 +80,11 @@ const Product = () => {
         SPhoto = SNurofen;
     }
 
+    if(type === 6){
+        IPhoto = IJuice;
+        SPhoto = SJuice;
+    }
+
     return (
         <Container fluid className = "Main">
             <MyNavbar type = {name}/>
@@ -99,6 +111,7 @@ const Product = () => {
                 </Col>  
             </Row>
             <Speech description={"Details" + details[type - 1].title + details[type - 1].description + "  price" + details[type - 1].price}/>
+            <Parser description={"Details" + details[type - 1].title + details[type - 1].description + "  price" + details[type - 1].price}/>
         </Container>
     )
 }

@@ -6,6 +6,9 @@ import IMalai from "../Products/ProductImages/malai.jpg"
 import SMalai from "../Products/ProductImages/malaiSign.jpg"
 import IWater from "../Products/ProductImages/water.jpg"
 import SWater from "../Products/ProductImages/waterSign.gif"
+import IJuice from "../Products/ProductImages/cappy.jpg"
+import SJuice from "../Products/ProductImages/juiceSign.jpg"
+
 
 import "../styles/Main.css"
 
@@ -30,6 +33,16 @@ const Food = () => {
                             <Card.Img variant="top" src={IWater} />
                             <Card.Body>                  
                                 <Card.Title> <Image src={SWater} alt="Logo" className = "ImageSign" />  </Card.Title>
+                            </Card.Body>
+                        </Card>
+                    </Link>
+                </Col>
+                <Col md={{ span: 3 }} className="pb-4" >
+                    <Link to = "/product" state = {{type:6, name:"Water"}}>
+                        <Card className = "Image">
+                            <Card.Img variant="top" src={IJuice} />
+                            <Card.Body>                  
+                                <Card.Title> <Image src={SJuice} alt="Logo" className = "ImageSign" />  </Card.Title>
                             </Card.Body>
                         </Card>
                     </Link>
