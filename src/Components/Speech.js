@@ -5,11 +5,17 @@ import styles from "../styles/water.css"
 
 
 const Speech = (props) => {
+
+    const calledOnce = React.useRef(0);
     const {speak} = useSpeechSynthesis();
     useEffect(() => {
+        if (calledOnce.current >= 2) {
+            return;
+        }
         setTimeout(function() { 
-            //speak({text: props.description})
+            speak({text: props.description})
         }, 2000)
+        calledOnce.current +=1;
     })
 
 
