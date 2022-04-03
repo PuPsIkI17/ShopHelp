@@ -1,5 +1,6 @@
 import React from "react";
 import { Container, Row, Col, Card, Image} from 'react-bootstrap';
+import {AnimationOnScroll} from 'react-animation-on-scroll';
 
 import MyNavbar from "../Components/Navbar"
 import IJBL from "../Images/team.jpg"
@@ -13,6 +14,11 @@ const Tech = () => {
     return (
         <Container fluid className = "Main">
             <MyNavbar type={"Tech"}/>
+            <AnimationOnScroll  
+                animateIn="animate__bounceInLeft"
+                duration={1}
+                delay={0}
+            >
             <Row className = 'pt-5 mt-5 text-center justify-content-md-center '>
                 <Col md={{ span: 3 }} className="pb-4" >
                     <Card className = "Image">
@@ -23,12 +29,18 @@ const Tech = () => {
                     </Card>
                 </Col> 
             </Row>
+            </AnimationOnScroll>
             <hr/>
             <Row className = 'mt-1 text-center justify-content-md-center '>
                 <Col md={{ span: 3 }} className="pb-4" >
                     <h3>Members:</h3>
                 </Col> 
             </Row>
+            <AnimationOnScroll  
+                animateIn="animate__bounceInLeft"
+                duration={1}
+                delay={0}
+            >
             <Row className = 'mb-3 text-center justify-content-md-center '>
                 <Col md={{ span: 3 }} className="pb-4" >
                     <h4>
@@ -55,12 +67,18 @@ const Tech = () => {
                 <a href= "https://www.linkedin.com/in/corneliu-calancea-23641916b/">Linkedin</a>
                 </Col>  
             </Row>
+            </AnimationOnScroll>
             <hr/>
             <Row className = 'mt-1 text-center justify-content-md-center '>
                 <Col md={{ span: 3 }} className="pt-2" >
                     <h3>Hackaton:</h3>
                 </Col> 
             </Row>
+            <AnimationOnScroll  
+                animateIn="animate__bounceInLeft"
+                duration={1}
+                delay={0}
+            >
             <Row className = 'mt-1 text-center justify-content-md-center '>
                 <Col md={{ span: 3 }}  >
                     <Image src={Coherent} className="Image pt-5"/>
@@ -69,6 +87,7 @@ const Tech = () => {
                     <Image src={Best} className="Image"/>
                 </Col> 
             </Row>
+            </AnimationOnScroll>
             <hr/>
             <Row className = 'mt-1 pb-4 text-center justify-content-md-center '>
                 <Col md={{ span: 3 }} className="pt-2" >
