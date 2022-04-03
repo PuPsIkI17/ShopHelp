@@ -149,13 +149,13 @@ const Product = () => {
                             {option === 0 &&
                                 <div>
                                     <Button onClick = {() => setOption(0)}>Letters</Button>
-                                    <Button onClick = {() => setOption(1)} variant="outline-primary"><Parser description={ "Signs"} type = {1} /></Button> 
+                                    <Button fluid onClick = {() => setOption(1)} variant="outline-primary"><Parser description={ "Signs"} type = {1} /></Button> 
                                 </div>
                             }
                            {option === 1 &&
                                 <div>
                                     <Button onClick = {() => setOption(0)} variant="outline-primary">Letters</Button>
-                                    <Button onClick = {() => setOption(1)}> <Parser description={"Signs"} type = {1} /></Button> 
+                                    <Button fluid onClick = {() => setOption(1)}> <Parser description={"Signs"} type = {1} /></Button> 
                                 </div>
                             }
 

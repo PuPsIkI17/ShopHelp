@@ -21,6 +21,11 @@ const MyNavbar = ({type}) => {
                         <NavDropdown.Item href="/all">All Products</NavDropdown.Item>
                     </NavDropdown>
                 </Nav>
+                <Nav >
+                    <Nav.Link href="/about">
+                        About
+                    </Nav.Link>
+                </Nav>
                 </Navbar.Collapse>
             </Container>
         </Navbar>
