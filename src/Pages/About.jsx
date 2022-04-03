@@ -49,6 +49,8 @@ const Tech = () => {
                     Ongoing Amazon SDE
                     <br/>
                     <a href= "https://www.linkedin.com/in/vadim-pislari-364679173/">Linkedin</a>
+                    <br/>
+                    <a href= "https://vadimpislari.netlify.app/">Resume Website</a>
                 </Col>
                 <Col md={{ span: 3 }} className="pb-4" >
                 <h4>
@@ -88,6 +90,14 @@ const Tech = () => {
                 </Col> 
             </Row>
             </AnimationOnScroll>
+            <hr/>
+            
+            <Row className = 'mt-1 text-center justify-content-md-center '>
+                <Col md={{ span: 3 }}  >
+                    <h3>Presentation:</h3>
+                    <a href='../Presentation/presentation.ppt' download>PowerPoint Presentation</a>
+                </Col> 
+            </Row>
             <hr/>
             <Row className = 'mt-1 pb-4 text-center justify-content-md-center '>
                 <Col md={{ span: 3 }} className="pt-2" >
