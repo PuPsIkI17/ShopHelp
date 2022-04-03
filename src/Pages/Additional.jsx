@@ -6,7 +6,6 @@ import "../styles/additional.css"
 import BarcodeScanner from "../Components/BarcodeScanner";
 
 const Additional = () => {
-
     return (
         <Container fluid className="Main">
             <MyNavbar type="Barcode Scanner"/>
@@ -16,9 +15,7 @@ const Additional = () => {
                 </Col>
             </Row>
             <Row className='pt-2 mt-2 text-center justify-content-md-center '>
-                <Col>
                     <BarcodeScanner/>
-                </Col>
             </Row>
         </Container>
     )

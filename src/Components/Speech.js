@@ -1,11 +1,18 @@
-import React from "react";
+import React, { useEffect } from "react";
 import {useSpeechSynthesis} from "react-speech-kit";
 import {Button} from 'react-bootstrap';
 import styles from "../styles/water.css"
 
+
 const Speech = (props) => {
     const {speak} = useSpeechSynthesis();
-    console.log(props)
+    useEffect(() => {
+        setTimeout(function() { 
+            //speak({text: props.description})
+        }, 2000)
+    })
+
+
     return (
         <div className="speech">
             <div className="group">

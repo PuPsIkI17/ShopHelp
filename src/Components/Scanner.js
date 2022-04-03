@@ -1,15 +1,24 @@
 import React, { Component } from 'react'
 import Quagga from 'quagga'
 
+
 class Scanner extends Component {
   componentDidMount() {
+    let mywidth = 1200;
+    let myheight =720;
+
+    var w = window.innerWidth;
+    if(w < 700){
+      mywidth = 240;
+      myheight = 500;
+    }
     Quagga.init(
       {
         inputStream: {
           type: 'LiveStream',
           constraints: {
-            width: {min: 640},
-            height: {min: 480},
+            width: mywidth,
+            height: myheight,
             facingMode: 'environment',
             aspectRatio: {min: 1, max: 2}
           },
